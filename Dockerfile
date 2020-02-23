@@ -39,3 +39,4 @@ RUN pecl install mongodb && docker-php-ext-enable mongodb \
     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/ \
     && docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache
+CMD service supervisor start;php-fpm
