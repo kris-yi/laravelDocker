@@ -40,4 +40,4 @@ RUN pecl install mongodb && docker-php-ext-enable mongodb \
     && docker-php-ext-configure opcache --enable-opcache \
     && docker-php-ext-install opcache
 ENTRYPOINT ["docker-php-entrypoint"]
-CMD ["service supervisor start && php-fpm"]
+CMD "service supervisor start && php-fpm"
